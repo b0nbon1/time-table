@@ -1,0 +1,13 @@
+# Build
+build/
+dist/
+webpack/
+webpack.config.js
+
+# Tests
+src/**/*.spec.js
+src/**/*.test.js
+setupTests.js
+
+# Dependency
+node_modules/
