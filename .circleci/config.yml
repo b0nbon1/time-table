@@ -1,0 +1,32 @@
+version: 2.1
+jobs:
+  tests:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn test
+  deploy:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - run:
+          command: curl -X POST -d {} ${DEPLOY_NETLIFY}
+workflows:
+  build:
+    jobs:
+      - tests
+      - deploy:
+          filters:
+            branches:
+              only: develop

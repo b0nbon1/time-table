@@ -12,7 +12,7 @@ module.exports = {
     },
     resolve: {
         modules: ['src', 'node_modules'],
-        extensions: ['*', '.js', '.scss', '.css']
+        extensions: ['*', '.js', '.jsx', '.scss', '.css']
     },
     plugins: [
         new Dotenv({

@@ -1,0 +1,8 @@
+@use '../utilities/variables' as *;
+@use './dashboard';
+
+body {
+  background-color: $gray-100;
+  color: $black;
+  font-family: $system;
+}

@@ -1,0 +1,14 @@
+.dashb-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & ~ h1 {
+    width: 50%;
+  }
+  &-left {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}

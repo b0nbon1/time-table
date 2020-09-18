@@ -1,0 +1,8 @@
+@use '../../utilities/variables' as *;
+
+.grid {
+  background-size: 250px 120px;
+  background-image:
+    linear-gradient(to right, $gray-300 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, $gray-300 1.5px, transparent 1.5px);
+}

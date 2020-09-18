@@ -1,0 +1,9 @@
+@use '../components/dashboard/dashboardhead';
+@use '../components/dashboard/timetable';
+@use '../components/dashboard/lessonCard';
+
+.dashboard-page {
+  margin-left: 17rem;
+  margin-right: 2rem;
+  padding-top: 4rem;
+}
